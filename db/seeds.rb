@@ -21,3 +21,29 @@ gardens.each do |garden|
     banner_url: garden[:banner_url]
   )
 end
+
+vondelpark = Garden.second
+
+Plant.create!(
+  name: "Monstera",
+  image_url: "https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/parks-and-plants/plants/monstera.jpg",
+  garden: vondelpark
+)
+
+Plant.create!(
+  name: "Philo",
+  image_url: "https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/parks-and-plants/plants/philo.jpg",
+  garden: vondelpark
+)
+
+Plant.create!(
+  name: "Dieff",
+  image_url: "https://raw.githubusercontent.com/lewagon/fullstack-images/master/rails/parks-and-plants/plants/dieffenbachia.jpg",
+  garden: vondelpark
+)
+
+names = %w[Fruit\ tree Cactus Greasy\ Plant Flower Ferns Conifers]
+
+names.each do |name|
+  Tag.create!(name: name)
+end
